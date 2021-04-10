@@ -1,0 +1,1 @@
+https://discord.com/api/oauth2/authorize?client_id=789444757339242537&redirect_uri=https%3A%2F%2Fjohngrubba.github.io%2FWoernyDashboard%2F&response_type=code&scope=identify%20email%20guilds
