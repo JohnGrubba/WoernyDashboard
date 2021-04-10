@@ -92,5 +92,11 @@
     <center>
         <div class="container">
             <b>LOGGED IN</b>
+            <b id="code">Waiting for Code!</b>
         </div>
     </center>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const myParam = urlParams.get('code');
+        document.getElementById("code").innerHTML = myParam
+    </script>
