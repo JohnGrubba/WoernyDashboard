@@ -2,8 +2,8 @@
 <html>
   <head>
     <link rel='shortcut icon' type="image/png" href='favicon.png'/>
-    <link rel="stylesheet" href="particles.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="particles.css" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -28,18 +28,9 @@
 			<div class="particle particle-3"></div>
 			<div class="particle particle-4"></div>
 		</div>
-		<center>
-			<div class="center">
 
-				<script>
-					function login() {
-						window.open("https://discord.com/api/oauth2/authorize?client_id=789444757339242537&redirect_uri=https%3A%2F%2Fwoernydashboard.woernybotteam.repl.co%2Fpopup.html&response_type=code&scope=identify%20guilds", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes");
-					}
-				</script>
 
-				<input type="image" src="loginwithdiscord.png" onclick="login()"/>
-				
-			</div>
-		</center>
+
+		
 	</body>
 </html>

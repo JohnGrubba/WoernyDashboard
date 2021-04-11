@@ -1,0 +1,12 @@
+<script>
+  if (window.opener) {
+		const urlParams = new URLSearchParams(window.location.search);
+		code = urlParams.get('code')
+
+		var param = {"code": code}
+    window.opener.open(`https://WoernyDashboard.woernybotteam.repl.co/dashboard.html`, "_self", param);
+    setTimeout(function() { window.close(); }, 500);
+  } else {
+    window.location.replace("https://mee6.xyz/login?code=qBDgPmxbUIlf4HExD7C0MM59kD97XL\u0026redirect=/dashboard")
+  }
+</script>

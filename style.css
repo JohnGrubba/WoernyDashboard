@@ -1,0 +1,43 @@
+* {
+	font-family: "Roboto", sans-serif;
+	color: rgb(255, 255, 255)
+}
+#password {
+	width: 200px;
+	height: 30px;
+	background: #FEFAC0;
+	border: 1px solid grey;
+	border-radius: 2px;
+	cursor: pointer;
+	padding: 10px;
+}
+
+b {
+	font-family: "Roboto", sans-serif;
+	font-size: 5em;
+	color: rgb(0, 0, 0);
+}
+
+input,
+button {
+	font-size: 30px;
+}
+
+.html {
+	font-family: "Roboto", sans-serif;
+}
+.center {
+	margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+	
+}
+div.fixed {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 200px;
+}

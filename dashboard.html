@@ -1,55 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
-    <meta name="hilltopads-site-verification" content="3daa69cbb14784be84c33c2b0d83a21b47d000dc" />
-  </head>
-  <body></body>
-</html>
-
-<html>
-  <head>
-    <style>
-      * {
-        font-family: "Roboto", sans-serif;
-        color: rgb(255, 255, 255)
-      }
-      #password {
-        width: 200px;
-        height: 30px;
-        background: #FEFAC0;
-        border: 1px solid grey;
-        border-radius: 2px;
-        cursor: pointer;
-        padding: 10px;
-      }
-
-      b {
-        font-family: "Roboto", sans-serif;
-        font-size: 5em;
-        color: rgb(0, 0, 0);
-      }
-    </style>
-    <link rel="stylesheet" href="./particles.css" />
-  </head>
-
-  <body>
-    <div class="page-bg"></div>
-
-    <div class="animation-wrapper">
-      <div class="particle particle-1"></div>
-      <div class="particle particle-2"></div>
-      <div class="particle particle-3"></div>
-      <div class="particle particle-4"></div>
-    </div>
-  </body>
-</html>
-
-<!DOCTYPE html>
-<html>
-  <head>
     <link rel='shortcut icon' type="image/png" href='favicon.png'/>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="particles.css" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -61,43 +15,42 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
       rel="stylesheet"
     />
-    <style>
-      input,
-      button {
-        font-size: 30px;
-      }
-
-      .html {
-        font-family: "Roboto", sans-serif;
-      }
-      .container {
-        font-family: "Roboto", sans-serif;
-        left: 0;
-        margin-top: -100px;
-        position: absolute;
-        text-align: center;
-        top: 50%;
-        width: 100%;
-      }
-      div.fixed {
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        width: 200px;
-      }
-    </style>
     <title>Woerny Dashboard</title>
   </head>
-<body>
+	<body>
+	
+    <div class="page-bg"></div>
+
+    <div class="animation-wrapper">
+      <div class="particle particle-1"></div>
+      <div class="particle particle-2"></div>
+      <div class="particle particle-3"></div>
+      <div class="particle particle-4"></div>
+    </div>
+
     <center>
-        <div class="container">
-            <b>LOGGED IN</b>
-            <br>
-            <b id="code">Waiting for Code!</b>
-        </div>
+			<div class="center">
+				<b>LOGGED IN</b>
+				<br>
+				<b id="code">Waiting for Code!</b>
+			</div>
     </center>
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const myParam = urlParams.get('code');
-        document.getElementById("code").innerHTML = 'Your Code: ' + myParam;
+			const urlParams = new URLSearchParams(window.location.search);
+			const myParam = urlParams.get('code');
+			document.getElementById("code").innerHTML = myParam;
+			document.getElementById("code").innerHTML = "Fetching Access Token..."
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					// Typical action to be performed when the document is ready:
+					document.getElementById("code").innerHTML = xhttp.responseText;
+				}
+			};
+			xhttp.open("GET", "https://woernydashboardapi.woernybotteam.repl.co/authorize/"+myParam, true);
+			xhttp.send();
     </script>
+	</body>
+</html>
+
+  
